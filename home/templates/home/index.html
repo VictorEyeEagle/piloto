@@ -9,7 +9,15 @@
 <body>
     <header>
         <h1>Bem-vindo à Minha Página</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+            </ul>
+        </nav>
     </header>
+
 
     <main>
         <section>
