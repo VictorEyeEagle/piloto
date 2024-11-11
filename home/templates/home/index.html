@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+{% extends 'home/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Minha Página Inicial</title>
-</head>
+{% block title %}Minha Página Inicial{% endblock %}
 
-<body>
+{% block content %}
     <header>
         <h1>Bem-vindo à Minha Página</h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'sobre' %}">Sobre</a></li>
-                <li><a href="{% url 'contato' %}">Contato</a></li>
-            </ul>
-        </nav>
     </header>
-
 
     <main>
         <section>
@@ -25,10 +13,4 @@
             <p>ola</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Minha Página. Todos os direitos reservados.</p>
-    </footer>
-</body>
-
-</html>
+{% endblock %}
