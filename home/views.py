@@ -1,27 +1,15 @@
 from django.shortcuts import render
+import datetime
+
 
 def index(request):
-    return render(request, 'home/index.html')
-
+    return render(request, "index.html")
 def sobre(request):
-    return render(request, 'home/sobre.html')
+    return render(request,'sobre.html')
 
 def contato(request):
-    return render(request, 'home/contato.html')
+    return render(request, 'contato.html')
 
-def dia_da_semana(request, dia):
-    dias_semana = {
-        1: 'Domingo',
-        2: 'Segunda-feira',
-        3: 'Terça-feira',
-        4: 'Quarta-feira',
-        5: 'Quinta-feira',
-        6: 'Sexta-feira',
-        7: 'Sábado'
-    }
-    nome_dia = dias_semana.get(dia, 'Dia inválido')  
-    return render(request, 'home/diasemana.html', {'nome_dia': nome_dia})
+def exibir_item(request,id):
+    return render(request,'exibir_item.html',{'id':id})
 
-def perfil(request, usuario):
-
-    return render(request, 'home/perfil.html', {'usuario': usuario})
